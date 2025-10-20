@@ -4,7 +4,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/atoms": ["./src/components/atoms/*"],
+      "@/molecules": ["./src/components/molecules/*"],
+      "@/organisms": ["./src/components/organisms/*"],
+      "@/pages": ["./src/pages/*"],
+      "@/hooks": ["./src/hooks/*"],
+      "@/utils": ["./src/utils/*"],
+      "@/components": ["./src/components/*"],
+      "@/services": ["./src/services/*"]
     },
     "noImplicitAny": false,
     "noUnusedParameters": false,

@@ -11,9 +11,16 @@ const sizeClasses = {
 const variantClasses = {
   default: "bg-dark-500 border border-primary",
   primary: "bg-primary",
-}
+};
 
-export const Avatar = ({ src, alt, size = "md", variant = "default", fallback, className = "" }: AvatarProps) => {
+export const Avatar = ({
+  src,
+  alt,
+  size = "md",
+  variant = "default",
+  fallback,
+  className = "",
+}: AvatarProps) => {
   const [imageError, setImageError] = useState(false);
 
   function handleImageError(): void {
@@ -34,7 +41,7 @@ export const Avatar = ({ src, alt, size = "md", variant = "default", fallback, c
 
   return (
     <div
-      className={`relative inline-flex items-center justify-center overflow-hidden rounded-full font-semibold text-primary-100 transition-all duration-300 hover:shadow-elegant ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
+      className={`hover:shadow-elegant relative inline-flex items-center justify-center overflow-hidden rounded-full font-semibold text-primary-100 transition-all duration-300 ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
     >
       {shouldShowFallback ? (
         <span>{displayFallback}</span>
@@ -48,6 +55,6 @@ export const Avatar = ({ src, alt, size = "md", variant = "default", fallback, c
       )}
     </div>
   );
-}
+};
 
 export default Avatar;
