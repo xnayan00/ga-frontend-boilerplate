@@ -13,14 +13,14 @@ const variantClasses = {
   primary: "bg-primary",
 };
 
-const Avatar = ({
+export default function Avatar({
   src,
   alt,
   size = "md",
   variant = "default",
   fallback,
   className = "",
-}: AvatarProps) => {
+}: AvatarProps) {
   const [imageError, setImageError] = useState(false);
 
   function handleImageError(): void {
@@ -55,6 +55,4 @@ const Avatar = ({
       )}
     </div>
   );
-};
-
-export default Avatar;
+}
