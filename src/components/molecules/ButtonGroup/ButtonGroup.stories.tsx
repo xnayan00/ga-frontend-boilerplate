@@ -33,7 +33,7 @@ const iconItems = [
     icon: (
       <Icon
         name="home"
-        color="primary"
+        color="dark-300"
         size="lg"
       />
     ),
@@ -43,8 +43,8 @@ const iconItems = [
     label: "Settings",
     icon: (
       <Icon
-        name="home"
-        color="primary"
+        name="settings"
+        color="dark-300"
         size="lg"
       />
     ),
@@ -54,8 +54,8 @@ const iconItems = [
     label: "Profile",
     icon: (
       <Icon
-        name="home"
-        color="primary"
+        name="user"
+        color="dark-300"
         size="lg"
       />
     ),

@@ -62,23 +62,40 @@ export default function ButtonGroup({
   };
 
   return (
-    <div className={cn("flex items-center gap-2 rounded-md bg-dark p-1", className)}>
-      {items.map((item) => (
+    <div className={cn("flex items-center gap-2 rounded-md p-1", className)}>
+      {items.map((item, index) => (
         <button
           key={item.value}
           type="button"
           onClick={() => handleSelect(item)}
           className={cn(
-            "flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium",
+            "group relative flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium",
             {
-              "bg-dark-400 text-dark-100": isSelected(item),
-              "bg-transparent text-dark-300 hover:bg-dark-400/50": !isSelected(item),
-              "h-10 w-10": variant === "icon",
+              "min-w-[150px]": variant === "default",
+              "min-w-[70px]": variant === "icon",
+              "-ml-8": variant === "icon" && index > 0,
             }
           )}
         >
-          {variant === "icon" && item.icon}
-          {variant === "default" && <span>{item.label}</span>}
+          <span
+            className={cn("z-10 transition-colors", {
+              "text-dark-100": isSelected(item),
+              "text-dark-300": !isSelected(item),
+            })}
+          >
+            {variant === "icon" && item.icon}
+            {variant === "default" && item.label}
+          </span>
+          <div
+            className={cn(
+              "absolute h-[34px] w-full -skew-x-[30deg] rounded-bl-[2px] rounded-br-[4px] rounded-tl-[4px] rounded-tr-[2px] transition-colors",
+              {
+                "bg-dark-400": isSelected(item),
+                "bg-dark group-hover:bg-dark-400": !isSelected(item),
+                "h-10 w-10": variant === "icon",
+              }
+            )}
+          />
         </button>
       ))}
     </div>
