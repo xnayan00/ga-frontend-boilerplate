@@ -13,6 +13,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1",
     "@storybook/react-vite": "^9.1.13",
     "axios": "^1.12.2",
     "clsx": "^2.1.1",
