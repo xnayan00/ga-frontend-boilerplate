@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+# Boilerplate Front-end Moderno
 
-## Project info
+Um boilerplate completo e profissional para desenvolvimento front-end com React, TypeScript, Tailwind CSS e muito mais.
 
-**URL**: https://lovable.dev/projects/9c92c934-58a5-4781-9c84-9b8de7be2783
+## 🚀 Stack Tecnológica
 
-## How can I edit this code?
+- **React 18** - Biblioteca UI
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Framework CSS utility-first
+- **React Router** - Roteamento
+- **i18next** - Internacionalização (PT/EN)
+- **Axios** - Cliente HTTP
+- **Storybook** - Documentação de componentes
+- **Bun** - Runtime e package manager
+- **ESLint + Prettier** - Qualidade de código
 
-There are several ways of editing your application.
+## 📁 Estrutura de Pastas
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/9c92c934-58a5-4781-9c84-9b8de7be2783) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+ ├── components/          # Componentes organizados por Atomic Design
+ │    ├── atoms/         # Componentes básicos (Button, Avatar, etc)
+ │    ├── molecules/     # Combinações de atoms
+ │    ├── organisms/     # Componentes complexos
+ │    └── templates/     # Templates de página
+ ├── pages/              # Páginas da aplicação
+ ├── routes/             # Configuração de rotas
+ ├── context/            # Contexts do React
+ ├── hooks/              # Custom hooks
+ ├── utils/              # Funções utilitárias
+ ├── api/                # Configuração de API (Axios)
+ ├── services/           # Serviços de comunicação com API
+ └── locales/            # Traduções (i18n)
 ```
 
-**Edit a file directly in GitHub**
+## 🎯 Características
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+✅ **Atomic Design** - Estrutura organizada e escalável  
+✅ **Internacionalização** - Suporte PT/EN pronto  
+✅ **Documentação** - Storybook configurado  
+✅ **Type-safe** - TypeScript em todo projeto  
+✅ **Lint rigoroso** - ESLint com regras profissionais  
+✅ **Design System** - Tailwind configurado com tokens semânticos  
+✅ **API Ready** - Axios configurado com interceptors  
 
-**Use GitHub Codespaces**
+## 🛠️ Comandos
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+# Desenvolvimento
+bun dev
 
-## What technologies are used for this project?
+# Build de produção
+bun run build
 
-This project is built with:
+# Lint
+bun lint
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Formatação
+bun format
 
-## How can I deploy this project?
+# Storybook
+bun storybook
+```
 
-Simply open [Lovable](https://lovable.dev/projects/9c92c934-58a5-4781-9c84-9b8de7be2783) and click on Share -> Publish.
+## 📚 Regras de Código
 
-## Can I connect a custom domain to my Lovable project?
+- ✅ Uso de `function` para componentes (não arrow functions)
+- ✅ Imports de tipos com `type`
+- ✅ Um atributo por linha no JSX
+- ✅ Proibido uso de `any`
+- ✅ Ordem: imports → constantes → funções → useEffects → return
 
-Yes, you can!
+## 🎨 Design System
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+O projeto utiliza tokens semânticos do Tailwind para garantir consistência visual:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- `primary` - Cor primária (azul vibrante)
+- `secondary` - Cor secundária (roxo)
+- `accent` - Cor de destaque (verde/cyan)
+- Gradientes prontos para uso
+- Sombras elegantes
+- Animações suaves
+
+## 🌍 Internacionalização
+
+Troque entre PT e EN facilmente:
+
+```tsx
+import { useTranslation } from 'react-i18next';
+
+const { t, i18n } = useTranslation();
+i18n.changeLanguage('en'); // ou 'pt'
+```
+
+## 📖 Storybook
+
+Documentação visual de componentes disponível em:
+
+```bash
+bun storybook
+```
+
+## 🔧 Configuração do Editor
+
+O projeto inclui configurações para VSCode:
+- Formatação automática ao salvar
+- ESLint automático
+- Prettier integrado
+
+## 📝 Licença
+
+MIT
+
+---
+
+**Desenvolvido com ❤️ usando as melhores práticas de desenvolvimento front-end**

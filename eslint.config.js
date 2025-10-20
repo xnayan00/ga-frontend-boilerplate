@@ -20,7 +20,28 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        {
+          prefer: "type-imports",
+          fixStyle: "separate-type-imports",
+        },
+      ],
+      "react/jsx-max-props-per-line": [
+        "error",
+        {
+          maximum: 1,
+          when: "always",
+        },
+      ],
+      "react/function-component-definition": [
+        "error",
+        {
+          namedComponents: "function-declaration",
+        },
+      ],
     },
   },
 );
