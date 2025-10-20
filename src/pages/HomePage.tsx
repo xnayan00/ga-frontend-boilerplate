@@ -14,8 +14,7 @@ export default function HomePage() {
       />
       <Icon
         name="home"
-        size="xl"
-        color="primary"
+        size="lg"
       />
     </div>
   );

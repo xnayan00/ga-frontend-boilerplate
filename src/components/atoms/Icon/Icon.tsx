@@ -10,7 +10,8 @@ const iconSizes = {
 export default function Icon({ name, color, size }: IconProps) {
   return (
     <i
-      className={`fi fi-rs-${name} flex items-center justify-center text-${color} text-[${iconSizes[size]}]`}
+      className={`fi fi-rs-${name} flex items-center justify-center text-[${iconSizes[size]}]`}
+      style={{ color: `hsl(var(--${color}))` }}
     />
   );
 }

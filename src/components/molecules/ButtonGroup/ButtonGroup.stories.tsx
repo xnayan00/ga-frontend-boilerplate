@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import ButtonGroup from "./ButtonGroup";
+import Icon from "@atoms/Icon";
 
 const meta: Meta<typeof ButtonGroup> = {
   title: "Molecules/ButtonGroup",
@@ -27,9 +27,39 @@ const defaultItems = [
 ];
 
 const iconItems = [
-  { value: "home", label: "Home", icon: <i className="fi fi-rs-home"></i> },
-  { value: "settings", label: "Settings", icon: <i className="fi fi-rs-home"></i> },
-  { value: "profile", label: "Profile", icon: <i className="fi fi-rs-home"></i> },
+  {
+    value: "home",
+    label: "Home",
+    icon: (
+      <Icon
+        name="home"
+        color="primary"
+        size="lg"
+      />
+    ),
+  },
+  {
+    value: "settings",
+    label: "Settings",
+    icon: (
+      <Icon
+        name="home"
+        color="primary"
+        size="lg"
+      />
+    ),
+  },
+  {
+    value: "profile",
+    label: "Profile",
+    icon: (
+      <Icon
+        name="home"
+        color="primary"
+        size="lg"
+      />
+    ),
+  },
 ];
 
 export const Default: Story = {
@@ -62,7 +92,7 @@ export const MandatoryMultiple: Story = {
   },
 };
 
-export const Icon: Story = {
+export const IconButton: Story = {
   args: {
     items: iconItems,
     variant: "icon",
@@ -72,7 +102,7 @@ export const Icon: Story = {
 
 export const IconMultiple: Story = {
   args: {
-    ...Icon.args,
+    ...IconButton.args,
     multiple: true,
     defaultValue: ["home", "settings"],
   },

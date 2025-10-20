@@ -69,7 +69,7 @@ export default function ButtonGroup({
           type="button"
           onClick={() => handleSelect(item)}
           className={cn(
-            "flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors",
+            "flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium",
             {
               "bg-dark-400 text-dark-100": isSelected(item),
               "bg-transparent text-dark-300 hover:bg-dark-400/50": !isSelected(item),
