@@ -13,7 +13,7 @@ const variantClasses = {
   primary: "bg-primary",
 };
 
-export const Avatar = ({
+const Avatar = ({
   src,
   alt,
   size = "md",
