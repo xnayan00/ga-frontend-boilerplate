@@ -1,17 +1,15 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes";
 import "./i18n";
-
-const queryClient = new QueryClient();
+import { StrictMode } from "react";
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
+    <StrictMode>
       <BrowserRouter>
         <AppRoutes />
       </BrowserRouter>
-    </QueryClientProvider>
+    </StrictMode>
   );
 }
 

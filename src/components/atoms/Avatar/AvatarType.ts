@@ -4,4 +4,5 @@ export interface AvatarProps {
   size?: "sm" | "md" | "lg" | "xl";
   fallback?: string;
   className?: string;
+  variant?: "default" | "primary";
 }

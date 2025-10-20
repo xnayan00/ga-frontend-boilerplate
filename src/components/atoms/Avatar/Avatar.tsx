@@ -2,13 +2,18 @@ import { useState } from "react";
 import type { AvatarProps } from "./AvatarType";
 
 const sizeClasses = {
-  sm: "h-8 w-8 text-xs",
-  md: "h-12 w-12 text-sm",
-  lg: "h-16 w-16 text-base",
-  xl: "h-24 w-24 text-xl",
+  sm: "h-[40px] w-[40px] text-[16px]",
+  md: "h-[50px] w-[50px] text-[20px]",
+  lg: "h-[80px] w-[80px] text-[32px]",
+  xl: "h-[150px] w-[150px] text-[48px]",
 };
 
-function Avatar({ src, alt, size = "md", fallback, className = "" }: AvatarProps) {
+const variantClasses = {
+  default: "bg-dark-500 border border-primary",
+  primary: "bg-primary",
+}
+
+export const Avatar = ({ src, alt, size = "md", variant = "default", fallback, className = "" }: AvatarProps) => {
   const [imageError, setImageError] = useState(false);
 
   function handleImageError(): void {
@@ -29,7 +34,7 @@ function Avatar({ src, alt, size = "md", fallback, className = "" }: AvatarProps
 
   return (
     <div
-      className={`relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-primary to-secondary font-semibold text-primary-foreground transition-all duration-300 hover:shadow-elegant ${sizeClasses[size]} ${className}`}
+      className={`relative inline-flex items-center justify-center overflow-hidden rounded-full font-semibold text-primary-100 transition-all duration-300 hover:shadow-elegant ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
     >
       {shouldShowFallback ? (
         <span>{displayFallback}</span>

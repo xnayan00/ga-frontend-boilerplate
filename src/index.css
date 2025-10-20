@@ -2,153 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 205 33% 9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 205 33% 9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 205 33% 9%;
-
-    /* Brand Colors - Primary */
-    --primary: 28 78% 47%;
-    --primary-foreground: 0 0% 100%;
-    --primary-400: 31 68% 58%;
-    --primary-300: 35 67% 68%;
-    --primary-200: 37 73% 79%;
-    --primary-100: 39 70% 89%;
-
-    /* Brand Colors - Dark */
-    --dark: 205 33% 9%;
-    --dark-foreground: 0 0% 100%;
-    --dark-500: 207 18% 17%;
-    --dark-400: 207 10% 27%;
-    --dark-300: 207 6% 46%;
-    --dark-200: 207 3% 64%;
-    --dark-100: 207 4% 81%;
+    /* Brand Colors & Varitions*/
+    --primary: 31 77% 47%;
+    --primary-400: 31 69% 58%;
+    --primary-300: 31 69% 68%;
+    --primary-200: 31 68% 79%;
+    --primary-100: 32 67% 89%;
+    --dark: 210 33% 9%;
+    --dark-500: 212 18% 17%;
+    --dark-400: 208 9% 27%;
+    --dark-300: 210 4% 45%;
+    --dark-200: 210 3% 64%;
+    --dark-100: 220 3% 82%;
 
     /* Functional Colors */
-    --success: 130 76% 47%;
-    --success-foreground: 0 0% 100%;
-    --success-dark: 133 35% 17%;
+    --success: 130 77% 47%;
+    --success-dark: 134 35% 17%;
     
-    --error: 0 65% 58%;
-    --error-foreground: 0 0% 100%;
-    --error-dark: 0 30% 18%;
+    --error: 0 69% 58%;
+    --error-dark: 0 29% 18%;
     
     --warning: 60 69% 68%;
-    --warning-foreground: 205 33% 9%;
-    --warning-dark: 60 35% 17%;
+    --warning-dark: 60 34% 17%;
     
-    --info: 221 70% 79%;
-    --info-foreground: 205 33% 9%;
-    --info-dark: 219 38% 19%;
+    --info: 223 68% 79%;
+    --info-dark: 222 37% 19%;
 
-    /* Legacy mappings for compatibility */
-    --secondary: 28 78% 47%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 207 4% 81%;
-    --muted-foreground: 207 10% 27%;
-    --accent: 130 76% 47%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 65% 58%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 207 4% 81%;
-    --input: 207 4% 81%;
-    --ring: 28 78% 47%;
-
-    --radius: 0.75rem;
-
-    --gradient-primary: linear-gradient(135deg, hsl(28 78% 47%), hsl(31 68% 58%));
-    --gradient-accent: linear-gradient(135deg, hsl(130 76% 47%), hsl(28 78% 47%));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(39 70% 89%));
-    
-    --shadow-elegant: 0 10px 30px -10px hsl(28 78% 47% / 0.3);
-    --shadow-glow: 0 0 40px hsl(31 68% 58% / 0.2);
-    
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Gradients */
+    --gradient-primary: linear-gradient(90deg, var(--primary), var(--primary-400));
   }
 
-  .dark {
-    --background: 205 33% 9%;
-    --foreground: 0 0% 100%;
-
-    --card: 207 18% 17%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 207 18% 17%;
-    --popover-foreground: 0 0% 100%;
-
-    /* Brand Colors - Primary (same in dark mode) */
-    --primary: 28 78% 47%;
-    --primary-foreground: 0 0% 100%;
-    --primary-400: 31 68% 58%;
-    --primary-300: 35 67% 68%;
-    --primary-200: 37 73% 79%;
-    --primary-100: 39 70% 89%;
-
-    /* Brand Colors - Dark */
-    --dark: 0 0% 100%;
-    --dark-foreground: 205 33% 9%;
-    --dark-500: 207 4% 81%;
-    --dark-400: 207 3% 64%;
-    --dark-300: 207 6% 46%;
-    --dark-200: 207 10% 27%;
-    --dark-100: 207 18% 17%;
-
-    /* Functional Colors */
-    --success: 130 76% 47%;
-    --success-foreground: 0 0% 100%;
-    --success-dark: 133 35% 17%;
-    
-    --error: 0 65% 58%;
-    --error-foreground: 0 0% 100%;
-    --error-dark: 0 30% 18%;
-    
-    --warning: 60 69% 68%;
-    --warning-foreground: 205 33% 9%;
-    --warning-dark: 60 35% 17%;
-    
-    --info: 221 70% 79%;
-    --info-foreground: 205 33% 9%;
-    --info-dark: 219 38% 19%;
-
-    /* Legacy mappings for compatibility */
-    --secondary: 28 78% 47%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 207 10% 27%;
-    --muted-foreground: 207 3% 64%;
-    --accent: 130 76% 47%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 65% 58%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 207 10% 27%;
-    --input: 207 10% 27%;
-    --ring: 28 78% 47%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(28 78% 47%), hsl(31 68% 58%));
-    --gradient-accent: linear-gradient(135deg, hsl(130 76% 47%), hsl(28 78% 47%));
-    --gradient-hero: linear-gradient(180deg, hsl(205 33% 9%), hsl(207 18% 17%));
-    
-    --shadow-elegant: 0 10px 30px -10px hsl(28 78% 47% / 0.4);
-    --shadow-glow: 0 0 40px hsl(31 68% 58% / 0.3);
+  .light {
+    /* light theme */
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
     @apply bg-background text-foreground;
   }
