@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes";
-import "./i18n";
 import { StrictMode } from "react";
+import "./i18n";
 
 function App() {
   return (

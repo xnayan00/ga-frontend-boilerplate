@@ -1,16 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../pages/HomePage";
+import WelcomePage from "../pages/WelcomePage";
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route
         path="/"
-        element={<HomePage />}
-      />
-      <Route
-        path="/home"
-        element={<HomePage />}
+        element={<WelcomePage />}
       />
     </Routes>
   );

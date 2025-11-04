@@ -1,15 +1,5 @@
 {
-  "welcome": "Welcome to Modern Boilerplate",
-  "description": "A complete front-end boilerplate with React, TypeScript, Tailwind and i18n",
-  "getStarted": "Get Started",
-  "learnMore": "Learn More",
-  "features": {
-    "title": "Features",
-    "atomicDesign": "Atomic Design",
-    "atomicDesignDesc": "Organized structure with atoms, molecules, organisms and templates",
-    "i18n": "Internationalization",
-    "i18nDesc": "Full support for multiple languages with i18next",
-    "storybook": "Storybook",
-    "storybookDesc": "Visual documentation for all components"
+  "homePage": {
+    "title": "Welcome to Boilerplate of Grupo Acelerador!"
   }
 }

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@storybook/react-vite": "^9.1.13",
+    "@yanmendes-GA/ga-ui": "^1.1.0",
     "axios": "^1.12.2",
     "clsx": "^2.1.1",
     "eslint-plugin-prettier": "^5.5.4",
